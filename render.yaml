@@ -1,9 +1,5 @@
 services:
-<<<<<<< HEAD
   # Backend (Node API)
-=======
-  # Backend (Node)
->>>>>>> a0a5d3c2ff3f1555669f4d16fc790817c3c3b875
   - type: web
     name: roadmap-server
     env: node
@@ -19,26 +15,12 @@ services:
       #   value: <your-mongo-uri>
 
   # Frontend (React/Vite)
-<<<<<<< HEAD
-<<<<<<< HEAD
-  - type: web
-=======
-  - type: static_site
->>>>>>> a0a5d3c2ff3f1555669f4d16fc790817c3c3b875
-    name: roadmap-client
-    env: node
-    rootDir: client
-    buildCommand: "npm install && npm run build"
-    startCommand: "npm start"
-    plan: starter
-=======
   - type: static_site
     name: roadmap-client
     rootDir: client
     buildCommand: "npm install && npm run build"
     staticPublishPath: dist
     plan: free
->>>>>>> a0a5d3c2ff3f1555669f4d16fc790817c3c3b875
     envVars:
       - key: VITE_API_URL
         value: https://roadmap-server.onrender.com
