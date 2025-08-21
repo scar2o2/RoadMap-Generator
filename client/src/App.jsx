@@ -11,7 +11,7 @@ function App() {
     setLoading(true);
     setRoadmap([]);
 
-    fetch("http://localhost:5000/api/roadmap", {
+    fetch(`${import.meta.env.VITE_API_URL}/api/roadmap`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ topic }),
