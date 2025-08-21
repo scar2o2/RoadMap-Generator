@@ -10,17 +10,15 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      # add your server secrets here
-      # - key: MONGO_URI
-      #   value: <your-mongo-uri>
 
   # Frontend (React/Vite)
-  - type: static_site
+  - type: web
     name: roadmap-client
+    env: node
     rootDir: client
     buildCommand: "npm install && npm run build"
-    staticPublishPath: dist
-    plan: free
+    startCommand: "npm start"
+    plan: starter
     envVars:
       - key: VITE_API_URL
         value: https://roadmap-server.onrender.com
