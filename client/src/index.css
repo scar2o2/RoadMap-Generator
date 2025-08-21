@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+@import "tailwindcss/theme" as theme;
+
+body {
+  @apply bg-[theme(colors.slate.50)] text-[theme(colors.slate.800)];
+}
+.container {
+  @apply mx-auto max-w-4xl p-6;
+}
+
